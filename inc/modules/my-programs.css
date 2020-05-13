@@ -1,0 +1,127 @@
+/* My Programs */
+.edit-program,
+.delete-program,
+.submit-program {
+  font-size: .9rem;
+  background-color: #EEE;
+  padding: 8px 16px;
+  display: inline-block;
+  margin-right: 7px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-program {
+  color: #FFF;
+  border: none;
+  background-color: $darkOrange;
+  line-height: 1.65;
+}
+
+.submit-program:hover {
+  background-color: color($darkOrange b(+10%) s(+10%));
+}
+
+.edit-program, .delete-program {
+  @media (min-width: 635px) {
+    position: relative;
+    top: 0px;
+  }
+}
+
+.edit-program:hover, .delete-program:hover {
+  background-color: #DDD;
+}
+
+.delete-program {
+  color: red;
+}
+
+.update-program {
+  visibility: hidden;
+}
+
+.update-program--visible {
+  visibility: visible;
+}
+
+.program-title-field {
+  width: 40%;
+  font-size: 1.85rem;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 300;
+  color: $mainBlue;
+  border: 1px solid transparent;
+  padding: 7px;
+  outline: none;
+  position: relative;
+  top: 1px;
+
+  @media (max-width: 400px) {
+    width: 100%;
+  }
+
+  @media (min-width: 635px) {
+    width: 65%;
+    font-size: 3.125rem;
+  }
+}
+
+.program-body-field {
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  resize: none;
+  display: block;
+  width: 100%;
+  line-height: 1.65;
+  font-size: 1.15rem;
+  padding: 7px;
+  border: 1px solid transparent;
+  height: 175px;
+  outline: none;
+}
+
+.program-active-field {
+  border: 1px solid #DDD;
+  animation: pulseBorder .75s alternate infinite;
+}
+
+@keyframes pulseBorder {
+  0% {
+    border: 1px solid #FFF;
+  }
+
+  100% {
+    border: 1px solid #CCC;
+  }
+}
+
+/* Create program */
+.create-program {
+  background-color: #DDD;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.new-program-title {
+  width: 100%;
+  padding: 10px;
+  font-family: 'Roboto', sans-serif;
+  border: none;
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+  box-sizing: border-box;
+}
+
+.new-program-body {
+  width: 100%;
+  box-sizing: border-box;
+  resize: none;
+  padding: 10px;
+  font-family: 'Roboto', sans-serif;
+  border: none;
+  margin-bottom: 10px;
+  height: 170px;
+  font-size: 1.15rem;
+  line-height: 1.65;
+}
